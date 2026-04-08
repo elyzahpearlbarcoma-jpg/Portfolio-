@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+* { box-sizing: border-box; }
+
+/* ANIMATED BACKGROUND */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #EEB7B7, #f5c6c6, #d9a7a7, #b76e79);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: #333;
+}
+
+body.dark {
+  background: linear-gradient(-45deg, #1e1e1e, #2c2c2c, #3a2a2a, #601B1B);
+  color: #eee;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* HEADER */
+header { text-align: center; padding: 30px; }
+
+header img {
+  width: 110px;
+  border-radius: 50%;
+  border: 3px solid #7C4B5D;
+}
+
+/* CV BUTTON */
+.cv-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: #7C4B5D;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.cv-btn:hover { background: #5C2A32; transform: scale(1.05); }
+
+/* NAV */
+nav { text-align: center; padding: 10px; }
+
+nav a {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+/* SECTION */
+section {
+  display: none;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+}
+
+body.dark section { background: #601B1B; }
+section.active { display: block; }
+
+/* PROJECTS */
+figure {
+  display: inline-block;
+  margin: 15px;
+}
+
+/* BUTTONS */
+.toggle-btn, #topBtn {
+  position: fixed;
+  background: #7C4B5D;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.toggle-btn { top: 15px; right: 15px; }
+#topBtn { bottom: 20px; right: 20px; display: none; }
+
+/* CONTACT */
+.contact-form { max-width: 400px; margin: auto; }
+
+.input-group {
+  display: flex;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.input-group input, .input-group textarea {
+  border: none;
+  background: transparent;
+  flex: 1;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 12px;
+  background: #7C4B5D;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+#typing { font-weight: bold; color: #5C2A32; }
+
+footer { text-align: center; padding: 15px; }
+</style>
+</head>
+
+<body>
+
+<button class="toggle-btn" onclick="toggleDark()">🌙</button>
+<button id="topBtn" onclick="scrollToTop()">⬆️</button>
+
+<header>
+  <img src="/profile/Messenger_creation_47DA4367-A52A-41E5-8169-ADFB19C1F8A8.jpeg">
+  <h1>Elyzah Pearl Barcoma</h1>
+  <p id="typing"></p>
+
+  <!-- ✅ CV UNDER TYPING -->
+  <a href="/cv/Elyzah_Pearl_Barcoma_CV.pdf" download class="cv-btn">
+    📄 Download CV
+  </a>
+</header>
+
+<nav>
+  <a onclick="showSection('Home')">Home</a>
+  <a onclick="showSection('About')">About</a>
+  <a onclick="showSection('Projects')">Projects</a>
+
+  <!-- ✅ CERTIFICATES BUTTON -->
+  <a onclick="showSection('Certificates')">Certificates</a>
+
+  <a onclick="showSection('Contacts')">Contact</a>
+</nav>
+
+<section id="Home" class="active">
+  <span style="vertical-align: middle; margin-left: 10px;"><p style="text-align: justify;">
+     <h1>Welcome</h1>
+  <p>I am Elyzah Pearl Barcoma, a passionate Information Technology student who enjoys creating digital designs and interactive projects. I specialize in using tools like Figma, Canva, and Photoshop to bring creative ideas to life. Explore my portfolio to see how I combine creativity and technology in my work.</p>
+</section>
+
+<section id="About">
+  <span style="vertical-align: middle; margin-left: 10px;"><p style="text-align: justify;">
+  <h1>About Me</h1>
+  <p>I am currently a second-year IT student at Central Philippine State University – Moises Padilla, with a strong interest in design and development. I have experience in creating user-friendly and visually appealing projects using modern design tools. I am dedicated to continuously improving my skills and creating meaningful digital experiences.</p>
+</section>
+
+<!-- ✅ YOUR PROJECTS (UNCHANGED) -->
+<section id="Projects">
+  <div style="text-align:center;"<h1>Projects</h1></div>
+  <p style="text-decoration: underline;"> PFIT-05 Media System </p>
+  
+        <figure>
+            <img src="/projects /Screenshot_20251028-203259_1.png" alt="T-Shirt Layout" width="150" height="150">
+            <figcaption>T-Shirt Layout</figcaption>
+        </figure>    
+        <figure>
+            <img src="/projects /Screenshot_20251027-181954_1.png" alt="Banner" width="200" height="110">
+            <figcaption>Banner</figcaption>
+        </figure>
+
+        <figure>
+            <img src="/projects /Screenshot_20251027-182131_1.png" width="150" height="150">
+            <figcaption>Product Design</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="/projects /Screenshot_20251028-202831_1.png" width="150" height="150">
+            <figcaption>Chest Board</figcaption>
+        </figure>
+        
+  <div style="text-align:center;">
+    <figure>
+      <iframe width="150" height="150" src="/videos /Group-2_TROPA_Activity1.mp4" allowfullscreen></iframe>
+      <figcaption>Groups Music Video </figcaption>
+    </figure>
+
+    <figure>
+      <iframe width="150" height="150" src="/videos /Short Film_Activity2.mp4" title="Figma Tutorial" allowfullscreen></iframe>
+      <figcaption>Short Film </figcaption>
+    </figure><br>
+    
+<div style="text-align:center;"><p style="text-decoration: underline;">Gel-02 Project </p>
+    <figure>
+      <iframe width="150" height="150" src="/videos /lv_0_20250911225414.mp4" title="Canva Tutorial" allowfullscreen></iframe>
+      <figcaption>Philippines Indigenous People. Made in canva</figcaption>
+    </figure><br>
+    
+    
+    <figure>
+      <iframe width="150" height="150" src="/videos /Group3-CRACKING" title="Canva Tutorial" allowfullscreen></iframe>
+      <figcaption>Awareness</figcaption>
+    </figure>
+  </div>
+  <li><h2></h2>Outputs</h2></li>
+        <br>
+           <ul>
+            <li><a href="https://www.canva.com/design/DAGuOrSlrYk/iIbQv0dtikl2nOm8zvCVdQ/edit?utm_content=DAGuOrSlrYk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Operating System </a></li>
+            <li><a href="https://www.canva.com/design/DAGvkkupgCw/Xbqb14surP8uVKVB1-yKAw/edit?utm_content=DAGvkkupgCw&utm_campaign=designshare&utm_medium=link2&utm_source>Operating System </a></li>=sharebutton">Common Problems of Operating System</a></li>
+            <li><a href="https://www.figma.com/proto/4ihmVEU5GtmMWhn9MzST95/My-Portfolio?page-id=0%3A1&node-id=16-33&starting-point-node-id=1%3A2&t=7hNTyrqoJfR5y6O7-1">Figma Portfolio</a></li>
+             <li><a href="https://www.figma.com/proto/24Iir7s3JTOxc0ycbqySKN/Food-website?page-id=0%3A1&node-id=12-6&p=f&viewport=1441%2C406%2C0.64&t=KFrvzNWX3ejZMy1K-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=12%3A6">Figma E-Commerce </a></li>
+              </div>
+  <div style="text-align:center;">
+    <figure>
+      <iframe width="150" height="150" src="https://youtu.be/2MCmnr2L50o?si=stA-9_z0ue96sCwK" title="Microsoft Tutorial" allowfullscreen></iframe>
+      <figcaption>Microsoft Tutorial</figcaption>
+    </figure>
+
+    <figure>
+      <iframe width="150" height="150" src="https://youtu.be/ezldKx-jPag?si=vd45glUc5XABRQ8q" title="Figma Tutorial" allowfullscreen></iframe>
+      <figcaption>Figma Tutorial</figcaption>
+    </figure>
+
+    <figure>
+      <iframe width="150" height="150" src="https://youtu.be/jzWxBuvwuwQ?si=04vRaKGL5m3XQcat" title="Canva Tutorial" alowfullscreen></iframe>
+      <figcaption>Canva Tutorial</figcaption>
+    </figure>
+  </div>
+</section>
+<!-- ✅ CERTIFICATES SECTION -->
+<section id="Certificates">
+  <h1>Certificates</h1>
+
+  <figure>
+    <img src="/Certificates /IMG_20260319_164748_357.jpg" width="200">
+    <figcaption>Web Design Certificate</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/Certificates /IMG_20260319_164847_598.jpg" width="200">
+    <figcaption>UI/UX Certificate</figcaption>
+  </figure>
+  
+  <figure>
+    <img src="/Certificates /IMG_20260319_164907_443.jpg" width="200">
+    <figcaption>UI/UX Certificate</figcaption>
+  </figure>
+  
+  <figure>
+    <img src="/Certificates /IMG_20260319_164935_680.jpg" width="200">
+    <figcaption>UI/UX Certificate</figcaption>
+  </figure>
+  
+  <figure>
+    <img src="/Certificates /Screenshot_20260218-224842.png" width="200">
+    <figcaption>UI/UX Certificate</figcaption>
+  </figure>
+</section>
+
+<section id="Contacts">
+  <h1>Contact</h1>
+
+  <form onsubmit="submitMessage(event)" class="contact-form">
+    <div class="input-group">👤 <input type="text" id="name" placeholder="Your Name"></div>
+    <div class="input-group">📧 <input type="email" id="email" placeholder="Your Email"></div>
+    <div class="input-group">💬 <textarea id="message" placeholder="Message"></textarea></div>
+
+    <button class="send-btn">✈️ Send</button>
+  </form>
+
+  <p id="formMessage">✅ Message sent!</p>
+</section>
+
+<footer>© 2025 Elyzah Pearl</footer>
+
+<script>
+function showSection(id){
+  document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+
+function toggleDark(){
+  document.body.classList.toggle("dark");
+}
+
+let txt="Creative Designer | IT Student", i=0;
+(function t(){
+  if(i<txt.length){
+    typing.innerHTML+=txt[i++];
+    setTimeout(t,50);
+  }
+})();
+
+function submitMessage(e){
+  e.preventDefault();
+  formMessage.style.display="block";
+  setTimeout(()=>formMessage.style.display="none",3000);
+}
+
+window.onscroll=()=>topBtn.style.display=scrollY>200?"block":"none";
+
+function scrollToTop(){
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
